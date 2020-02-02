@@ -47,8 +47,13 @@ public class TestWikiPedia {
 			((DesiredCapabilities) caps).setJavascriptEnabled(true);
 			((DesiredCapabilities) caps).setCapability("takesScreenshot", true);
 			((DesiredCapabilities) caps).setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-					"E:\\learn\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
+					"/usr/local/bin/phantomjs");
 			
+			/*
+			 * ((DesiredCapabilities) caps).setCapability(PhantomJSDriverService.
+			 * PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
+			 * "E:\\learn\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
+			 */
 			driver = new PhantomJSDriver(caps);
 			driver.navigate().to(homeUrl);
 			driver.manage().window().maximize();
